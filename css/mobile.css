@@ -1,0 +1,135 @@
+/* @media ( min-width : 320px ) and ( max-width : 767px ) {
+
+} */
+
+@media( max-width : 767px ) {
+    .modal_login{
+        width: 100%;
+    }
+   /* header */
+   header{
+    width: 100%;
+    padding: 30px;
+   }
+   header h1 a{
+    width: 80px;
+   }
+   .intro{
+    height: 100vh;
+   }
+   /* section */
+   section{
+    padding: 25px;
+    box-sizing: border-box;
+   }
+   section.intro .tit h2{
+    font-size: 40px;
+   }
+   section.intro .tit h5{
+    font-size: 20px;
+   }
+   section.intro .tit p{
+    font-size: 16px;
+   }
+   section.intro .tit .getstart{
+    width: 90%;
+   }
+   section.intro .tit .getstart .start{
+    margin-top: 15px;
+   }
+   .enjoy,.prev,.download,.kids{
+    height: auto;
+   }
+   section .inner{
+    width: 100%;
+    position: static;
+    transform: translate(0);
+   }
+   section .inner .desc,section .inner .imgbox{
+    float: none;
+    width: 100%;
+    text-align: center;
+   }
+   section .inner .desc,section .inner .imgbox img{
+    width: 100%;
+    height: auto;
+   }
+   /* 2번째 4번째 위치 바꾸기 */
+   section.previwe .inner,section.kids .inner{
+    display: flex;
+    flex-direction: column;
+   }
+   section.previwe .inner .desc,
+   section.kids .inner desc{
+    order: 1;
+   }
+   section.previwe .inner .imgbox,
+   section.kids .inner .imgbox{
+    order: 2;
+   }
+
+
+   section .inner .desc h2{
+    font-size: 28px;
+   }
+   section .inner .desc p{
+    font-size: 16px;
+   }
+   .download .inner .imgbox video{
+    width: 260px;
+   }
+   /* 아코디언메뉴 */
+ 
+   section.faq{
+    width: 100%;
+   }
+   section.faq .gnb{
+    width: 100%;
+   }
+   section.faq .gnb h2{
+    font-size: 28px;
+   }
+   section.faq .gnb>ul>li>a{
+    font-size: 16px;
+   }
+   section.faq .bottom{
+    width: 100%;
+   }
+   section.faq .gnb>ul>li>.depth2 li p,
+   section.faq .gnb>ul>li>.depth2 li p a{
+    font-size: 16px;
+   }
+   section.faq .gnb>ul>li>a .fa-plus{
+    width: 24px;
+    height: 24px;
+   }
+   section.faq .gnb>ul>li>a.on>.fa-plus{
+    top: 28px;
+}
+ 
+   section.faq .bottom .getstart input[type=email] + span{
+    left: 15%;
+   }
+  
+   section.faq .bottom .getstart{
+    width: 100%;
+
+   }
+   section.faq .bottom .getstart .start{
+    margin-top: 15px;
+   }
+   /* footer */
+   footer{
+    padding: 25px;
+    box-sizing: border-box;
+   }
+   footer .ft_inner{
+    width: 100%;
+   }
+   footer .ft_inner .sitemap ul{
+    width: 50%;
+   }
+ 
+   
+
+}

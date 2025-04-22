@@ -1,0 +1,505 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+    color: #fff;
+}
+body.on{
+    /* 스크로바 미처리 */
+    overflow: hidden;
+}
+*{margin: 0;padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none;}
+button{border: none;background: none;cursor: pointer;}
+/* 초기화 */
+
+.wrap{
+    position: relative;
+}
+/* modal_login */
+.modal_login{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    /* background: url(../imges/KR-ko-20230508-popsignuptwoweeks-perspective_alpha_website_small.jpg)no-repeat; */
+    z-index: 100;
+    display: none;
+}
+.modal_login .login{
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 60px;
+    box-sizing: border-box;
+}
+.modal_login .login h2{
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+.modal_login .login input[type=text] + span{
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    left: 80px;
+    top: 155px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.modal_login .login input[type=text]:focus + span{
+    transform: translateY(-15px);
+    font-size: 10px;
+}
+.modal_login .login input[type=text]:focus{
+    background: #555;
+}
+.modal_login .login input[type=password] + span{
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    left: 80px;
+    top: 224px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    
+}
+.modal_login .login input[type=password]:focus + span{
+    transform: translateY(-15px);
+    font-size: 10px;
+}
+.modal_login .login input[type=password]:focus{
+    background: #555;
+}
+.modal_login .login input[type=text],
+.modal_login .login input[type=password]{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    color: #fff;
+}
+.modal_login .login input[type=button]{
+    width: 100%;
+    padding: 18px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #EA0712;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.modal_login .login .login_Save{
+    margin: 20px 0 80px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.modal_login .login .login_Save a{
+    color: rgba(255, 255, 255, 0.5);
+}
+.modal_login .login .login_Save a:hover{
+    text-decoration: underline;
+}
+.modal_login .login p,
+.modal_login .login span{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.modal_login .login span a{
+    font-size: 16px;
+    color: #fff;
+}
+.modal_login .login span a:hover{
+    text-decoration: underline;
+}
+.modal_login .login p a{
+    color: rgba(255, 255, 255, 0.5);
+}
+.modal_login .login p a:hover{
+    text-decoration: underline;
+}
+/* 종료버튼 */
+.modal_login .login>strong{
+    font-size: 30px;
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    cursor: pointer;
+}
+
+/* header */
+header{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+header h1 a{
+    display: block;
+    width: 120px;
+    height: 35px;
+    background: url(../imges/logo.png)no-repeat left center;
+    background-size: cover;
+    text-indent: -99999px;
+}
+.lang{
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    margin-right: 20px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    text-align: center;
+    line-height: 32px;
+}
+em{
+   font-size: 14px; 
+   padding: 0 2px;
+}
+header .login .btn_login{
+    padding: 8px 14px;
+    font-size: 14px;
+    background: #EA0712;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* section_intro */
+section.intro{
+    width: 100%;
+    height: 80vh; 
+    background: url(../imges/KR-ko-20230508-popsignuptwoweeks-perspective_alpha_website_small.jpg)no-repeat;
+    background-size:cover;
+    position: relative;
+}
+section.intro::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+section.intro .tit{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+section.intro .tit h2{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+section.intro .tit h5{
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+section.intro .tit p{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+section.intro .tit .getstart{
+    display: inline-block;
+    position: relative;
+}
+section.intro .getstart input[type=email]{
+    width: 335px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    text-indent: 15px;
+    color: #fff;
+}
+
+section.intro .tit .getstart input[type=email] + span{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;   /* 이벤트 무시하는 명령 */
+    transition: all 0.3s ease;
+
+}
+section.intro .tit .getstart input[type=email]:focus + span{
+    transform: translateY(-10px);
+    font-size: 12px;
+}
+section.intro .tit .getstart .start{
+    width: 140px;
+    height: 46px;
+    background: #EA0712;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #EA0712;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+section.intro .tit .getstart .start:hover{
+    background: #C11119;
+    border: 1px solid #C11119;
+}
+/* 공통 css */
+section{
+    border-bottom: 5px solid #555;
+    position: relative;
+}
+
+section .inner{
+    width: 1200px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.enjoy,.previwe,.download,.kids{
+    height: 550px;
+}
+section .inner .desc{
+    width: 60%;
+    padding-top: 80px;
+}
+section .inner .imgbox{
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+section .inner .desc,section .inner .imgbox{
+    float: left;
+}
+section .inner .desc,section .inner .imgbox img{
+    height: 360px;
+}
+section .inner .desc h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+section .inner .desc p{
+    font-size: 20px;
+}
+
+/* section_enjoy */
+.enjoy .inner .imgbox video{
+    width: 340px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-60%);
+    z-index: -1;
+}
+
+/* section_dowmload */
+.download .inner .imgbox video{
+    width: 290px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-90%);
+    z-index: -1;
+}
+
+/* section_faq *//* 아코디언메뉴 */
+section.faq{
+    width: 1200px;
+    margin: 0 auto;
+}
+section.faq .gnb{
+    width: 1200px;
+    margin: 22px auto;
+}
+section.faq .gnb h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 22px 0;
+    text-align: center;
+}
+section.faq .gnb>ul>li{
+    background: #2D2D2D;
+    margin-bottom: 8px;  
+}
+section.faq .gnb>ul>li:last-child{
+    margin-bottom: 0;
+}
+section.faq .gnb>ul>li>a{
+    display: block;
+    width: 100%;
+    font-size: 23px;
+    padding: 30px 0;
+    text-indent: 27px;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+section.faq .gnb>ul>li>a>.fa-plus{
+    width: 48px;
+    height: 48px;
+    /* background: url(../imges/add_FILL0_wght400_GRAD0_opsz40.png)no-repeat center center;
+    background-size: 48px 48px;
+    text-indent: -99999px; */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+section.faq .gnb>ul>li>a.on>.fa-plus{
+    transform: rotate(-135deg);
+    top: 20px;
+}
+
+section.faq .gnb>ul>li:hover>a{
+    background: #4e4e4e;
+}
+
+section.faq .gnb>ul>li>.depth2{
+    border-top: 1px solid #000;
+    display: none;
+    
+}
+section.faq .gnb>ul>li>.depth2:first-child{
+    border-top: 0;
+}
+
+section.faq .gnb>ul>li>.depth2 li p{
+    display: block;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 30px 27px;
+}
+section.faq .gnb>ul>li>.depth2 li p a{
+    display: block;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.9);
+}
+section.faq .getstart{
+    display: inline-block;
+    position: relative;
+}
+
+section.faq .bottom{
+    width: 1200px;
+    text-align: center;
+    padding: 40px 0 60px 0;
+}
+section.faq .bottom p{
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+section.faq .bottom .getstart input[type=email]{
+    width: 335px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    text-indent: 15px;
+    color: #fff;
+  
+}
+
+section.faq .bottom .getstart input[type=email] + span{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;   /* 이벤트 무시하는 명령 */
+    transition: all 0.3s ease;
+  
+
+}
+section.faq .bottom .getstart input[type=email]:focus + span{
+    transform: translateY(-10px);
+    font-size: 12px;
+  
+}
+section.faq .bottom .getstart .start{
+    width: 140px;
+    height: 46px;
+    background: #EA0712;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #EA0712;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+section.faq .bottom .getstart .start:hover{
+    background: #C11119;
+    border: 1px solid #C11119;
+}
+
+/* footer */
+footer{
+    padding: 50px 0;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+footer .ft_inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+footer .ft_inner .sitemap{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+footer .ft_inner .sitemap h5{
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+footer .ft_inner .sitemap ul{
+    float: left;
+    width: 24%;
+}
+footer .ft_inner .sitemap ul li{
+    line-height: 24px;
+}
+footer .ft_inner .sitemap ul li:hover a{
+    text-decoration: underline;
+}
+footer .ft_inner .sitemap ul a,
+footer .ft_inner .copy span a{
+    color: rgba(255, 255, 255, 0.5);
+}
+footer .ft_inner .copy{
+    padding-top: 20px;
+}
+footer .ft_inner .copy p{
+    margin-top: 20px;
+}
+footer .ft_inner .copy .lang{
+    color: rgba(255, 255, 255, 0.5);
+}
+footer .ft_inner .copy span a:hover{
+    text-decoration: underline;
+}
